@@ -1,0 +1,163 @@
+.app{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  background-color:black;
+  color: white
+}
+
+.main{
+  width: 70%;
+  background: url('./assests/bg.jpg') center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.top{
+  height: 50%;
+  position: relative;
+}
+
+.timer{
+  width: 70px;
+  height: 70px;
+  border: 5px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.trivia{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.question{
+  width:80%;
+  border: 2px solid snow;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.answers{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.answer{
+  width: 40%;
+  padding: 10px;
+  border: 2px solid snow;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0 10px 20px 10px;
+  cursor: pointer;
+  
+}
+
+.answer:hover,
+.answer.active{
+  background-color: teal;
+}
+
+.answer.correct{
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42%{
+    background-color: teal;
+  }
+  20%,
+  40%,
+  60%{
+    background-color: black;
+  }
+  62%,
+  100%{
+    background-color: green;
+  }
+  
+}
+
+.answer.wrong{
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42%{
+    background-color: teal;
+  }
+  20%,
+  40%,
+  60%{
+    background-color: black;
+  }
+  62%,
+  100%{
+    background-color: red;
+  }
+  
+}
+
+.bottom{
+  height: 50%;
+}
+
+.pyramid{
+  width:30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.moneyList{
+  width: 80%;
+  list-style: none;
+}
+
+.moneyListItem{
+  display : flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+.moneyListItem.active{
+  background-color: teal;
+  border-radius: 10px;
+  
+}
+
+.moneyListItemNumber{
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+h1{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
